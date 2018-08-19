@@ -249,16 +249,7 @@ Fingerprint.registerTest('document.parameters', function() {
 
     var allProperties = knownProperties.concat(checkExistenceOnly);
 
-    var available = '';
-    for (var i = 0; i < allProperties.length; ++i) {
-        var property = allProperties[i];
-        if (property in document) {
-            available += '1';
-        } else {
-            available += '0';
-        }
-    }
-    return available;
+    return propertyExistenceToBinary(document, knownProperties.concat(checkExistenceOnly));
 });
 
 Fingerprint.registerTest('document.domobjects', function() {

@@ -859,16 +859,7 @@ Fingerprint.registerTest('window.properties', function() {
         'XSLTProcessor',
     ]
 
-    var available = '';
-    for (var i = 0; i < knownWindowProperties.length; ++i) {
-        var property = knownWindowProperties[i];
-        if (property in window) {
-            available += '1';
-        } else {
-            available += '0';
-        }
-    }
-    return available;
+    return propertyExistenceToBinary(window, knownWindowProperties);
 });
 
 

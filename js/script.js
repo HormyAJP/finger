@@ -2,7 +2,7 @@
 //https://www.keycdn.com/blog/browser-compatibility-testing-tools/
 "use strict";
 
-log("navigator.deviceMemory: " + navigator.deviceMemory);
-log("navigator.platform: " + navigator.platform);
+// log("navigator.deviceMemory: " + navigator.deviceMemory);
+// log("navigator.platform: " + navigator.platform);
 
 

@@ -23,3 +23,16 @@ function boolArrayToBinary(array) {
     }
     return ret.join('');
 }
+
+function propertyExistenceToBinary(object, properties) {
+    var available = '';
+    for (var i = 0; i < properties.length; ++i) {
+        var property = properties[i];
+        if (property in object) {
+            available += '1';
+        } else {
+            available += '0';
+        }
+    }
+    return available;
+}

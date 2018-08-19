@@ -48,8 +48,8 @@ function _objectToString(object, depth) {
     }
 
     ret += "{\n"
-    if (object.getPrototypeOf() != null) {
-        ret += padding + spaces + '"__proto__": ' + _objectToString(object.getPrototypeOf(), depth + 1);
+    if (Object.getPrototypeOf(object) != null) {
+        ret += padding + spaces + '"__proto__": ' + _objectToString(Object.getPrototypeOf(object), depth + 1);
     }
 
     for (var property in object) {
@@ -57,7 +57,7 @@ function _objectToString(object, depth) {
             if (property == 'TEXT_NODE') {
                 ret += object.toString();
             }
-            // ret += padding + spaces + property + ': ' + objectToString(object.getPrototypeOf(), depth + 1);
+            ret += padding + spaces + property + ': ' + objectToString(Object.getPrototypeOf(object), depth + 1);
         }
     }
     ret += padding + "}\n"

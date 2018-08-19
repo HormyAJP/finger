@@ -1,0 +1,42 @@
+"use strict";
+
+Fingerprint.registerTest('navigator.parameters', function() {
+    var knownProperties = [
+        'appCodeName',
+        'appName',
+        'appVersion',
+        'bluetooth',
+        'budget',
+        'clipboard',
+        'connection',
+        'cookieEnabled',
+        'credentials',
+        'deviceMemory',
+        'doNotTrack',
+        'geolocation',
+        'hardwareConcurrency',
+        'keyboard',
+        'language',
+        'languages',
+        'maxTouchPoints',
+        'mediaCapabilities',
+        'mediaDevices',
+        'mimeTypes',
+        'onLine',
+        'permissions',
+        'platform',
+        'plugins',
+        'presentation',
+        'product',
+        'productSub',
+        'serviceWorker',
+        'storage',
+        'usb',
+        'userAgent',
+        'vendor',
+        'vendorSub',
+        'webkitPersistentStorage',
+        'webkitTemporaryStorage',
+    ]
+    return propertyExistenceToBinary(navigator, knownProperties)
+});

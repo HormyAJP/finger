@@ -12,3 +12,8 @@ Fingerprint.registerTest('function.toString', function() {
 
     return stringifyMe.toString();
 });
+
+Fingerprint.registerTest('function.nativeToString', function() {
+    // There are newline differences between chrome and most other browsers
+    return window.alert.toString();
+});
