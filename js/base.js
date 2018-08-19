@@ -84,4 +84,3 @@ function _domObjectToString(dom, depth) {
     ret += padding + "}\n";
     return ret;
 }
-

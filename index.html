@@ -12,16 +12,37 @@
 
 <body>
     <pre><div id="log"></div></pre>
-    <script>
-        window.onerror = function(e) {
-            // log('An error has occurred: ' + e);
-        }
-    </script>
-
+    <script src="js/base.js"></script>
     <script src="js/md5.js"></script>
-    <script src="js/bad.js"></script>
-    <script src="js/script.js"></script>
-    <!-- <script src="file:///Users/andrewparker/dev/fingerprinting/git/finger/js/script.js"></script> -->
+    <script src="js/framework.js"></script>
+    <script src="js/testCommon.js"></script>
+    <script>Fingerprint.startSyntaxTest('defaultParameters');</script>
+    <script src="js/syntaxTests/defaultParameters.js"></script>
+    <script>Fingerprint.endSyntaxTest('defaultParameters');</script>
+    <script>Fingerprint.startSyntaxTest('let');</script>
+    <script src="js/syntaxTests/let.js"></script>
+    <script>Fingerprint.endSyntaxTest('let');</script>
+    <script>Fingerprint.startSyntaxTest('const');</script>
+    <script src="js/syntaxTests/const.js"></script>
+    <script>Fingerprint.endSyntaxTest('const');</script>
+    <script>Fingerprint.startSyntaxTest('restArray');</script>
+    <script src="js/syntaxTests/restArray.js"></script>
+    <script>Fingerprint.endSyntaxTest('restArray');</script>
+    <script>Fingerprint.startSyntaxTest('spreadArray');</script>
+    <script src="js/syntaxTests/spreadArray.js"></script>
+    <script>Fingerprint.endSyntaxTest('spreadArray');</script>
+    <script>Fingerprint.startSyntaxTest('exponentialOperator');</script>
+    <script src="js/syntaxTests/exponentialOperator.js"></script>
+    <script>Fingerprint.endSyntaxTest('exponentialOperator');</script>
+    <script src="js/regularTests/document.js"></script>
+    <script src="js/regularTests/window.js"></script>
+    <script src="js/regularTests/function.js"></script>
+    <script src="js/regularTests/math.js"></script>
+    <script src="js/regularTests/platform.js"></script>
+    <script src="js/regularTests/errors.js"></script>
+    <script src="js/regularTests/jsFeatures.js"></script>
+    <script src="js/regularTests/userAgent.js"></script>
+    <script>Fingerprint.runTests();</script>
 
 </body>
 </html>
