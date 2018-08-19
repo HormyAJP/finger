@@ -25,7 +25,7 @@ function _Fingerprint() {
         this.results[testName] = new TestResult(result);
         // TODO: BAD: Shouldn't log here
         log("<b>" + testName + "</b>");
-        log(result);
+        log(this.results[testName].raw);
     }
 
     this.startSyntaxTest = function(testName) {
