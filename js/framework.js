@@ -29,7 +29,6 @@ function _Fingerprint() {
     }
 
     this.startSyntaxTest = function(testName) {
-        console.log("PARKER: " + this.syntaxTests);
         this.syntaxTests[testName] = true;
         var that = this;
         window.onerror = function(e) {
