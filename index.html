@@ -11,7 +11,17 @@
 </head>
 
 <body>
-    <div id="log"></div>
+    <pre><div id="log"></div></pre>
+    <script>
+        window.onerror = function(e) {
+            // log('An error has occurred: ' + e);
+        }
+    </script>
+
+    <script src="js/md5.js"></script>
+    <script src="js/bad.js"></script>
     <script src="js/script.js"></script>
+    <!-- <script src="file:///Users/andrewparker/dev/fingerprinting/git/finger/js/script.js"></script> -->
+
 </body>
 </html>
